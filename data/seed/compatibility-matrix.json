@@ -1,0 +1,241 @@
+{
+  "version": "1.0.0",
+  "source": "Curated from FSF compatibility matrix, SPDX license expressions spec, and published legal analysis",
+  "methodology": "Each entry verified against license text and FSF/OSI published guidance. Confidence reflects legal certainty.",
+  "entries": [
+    {
+      "license_a": "MIT",
+      "license_b": "Apache-2.0",
+      "linking_type": "any",
+      "compatible": true,
+      "direction": "bidirectional",
+      "conditions": "Both are permissive. Include both copyright notices and the Apache-2.0 NOTICE file. Combined work may be distributed under either license's terms for respective components.",
+      "confidence": "established"
+    },
+    {
+      "license_a": "ISC",
+      "license_b": "MIT",
+      "linking_type": "any",
+      "compatible": true,
+      "direction": "bidirectional",
+      "conditions": "Both are permissive with functionally identical terms. Include both copyright notices.",
+      "confidence": "established"
+    },
+    {
+      "license_a": "BSD-2-Clause",
+      "license_b": "MIT",
+      "linking_type": "any",
+      "compatible": true,
+      "direction": "bidirectional",
+      "conditions": "Both are permissive with nearly identical terms. Include both copyright notices.",
+      "confidence": "established"
+    },
+    {
+      "license_a": "MIT",
+      "license_b": "GPL-2.0-or-later",
+      "linking_type": "any",
+      "compatible": true,
+      "direction": "a_into_b",
+      "conditions": "MIT code can be incorporated into GPL-2.0+ projects. The combined work must be distributed under GPL-2.0-or-later. MIT's terms (notice preservation) are compatible with GPL requirements.",
+      "confidence": "established"
+    },
+    {
+      "license_a": "MIT",
+      "license_b": "GPL-3.0-or-later",
+      "linking_type": "any",
+      "compatible": true,
+      "direction": "a_into_b",
+      "conditions": "MIT code can be incorporated into GPL-3.0+ projects. The combined work must be distributed under GPL-3.0-or-later. MIT imposes no additional restrictions beyond what GPL permits.",
+      "confidence": "established"
+    },
+    {
+      "license_a": "Apache-2.0",
+      "license_b": "GPL-2.0-only",
+      "linking_type": "any",
+      "compatible": false,
+      "direction": "bidirectional",
+      "conditions": "Incompatible. Apache-2.0's patent termination clause (Section 3) constitutes an additional restriction under GPL-2.0 Section 6, which prohibits imposing further restrictions on recipients. The FSF confirms this incompatibility.",
+      "confidence": "established"
+    },
+    {
+      "license_a": "Apache-2.0",
+      "license_b": "GPL-3.0-or-later",
+      "linking_type": "any",
+      "compatible": true,
+      "direction": "a_into_b",
+      "conditions": "Apache-2.0 code can be included in GPL-3.0+ projects. GPL-3.0 Section 7 explicitly permits additional patent termination clauses, resolving the conflict that exists with GPL-2.0. Combined work distributed under GPL-3.0-or-later.",
+      "confidence": "established"
+    },
+    {
+      "license_a": "BSD-2-Clause",
+      "license_b": "GPL-2.0-or-later",
+      "linking_type": "any",
+      "compatible": true,
+      "direction": "a_into_b",
+      "conditions": "BSD-2-Clause code can be incorporated into GPL-2.0+ projects. BSD-2-Clause's only requirements (notice retention) are compatible with GPL. Combined work under GPL-2.0-or-later.",
+      "confidence": "established"
+    },
+    {
+      "license_a": "MIT",
+      "license_b": "proprietary",
+      "linking_type": "any",
+      "compatible": true,
+      "direction": "a_into_b",
+      "conditions": "MIT code can be included in proprietary software. You must include the MIT copyright notice and permission notice in documentation or source distributions. No requirement to disclose proprietary source code.",
+      "confidence": "established"
+    },
+    {
+      "license_a": "Apache-2.0",
+      "license_b": "proprietary",
+      "linking_type": "any",
+      "compatible": true,
+      "direction": "a_into_b",
+      "conditions": "Apache-2.0 code can be included in proprietary software. You must include the NOTICE file contents, state changes made to Apache-licensed files, and retain copyright/patent/trademark notices. No requirement to disclose proprietary source code.",
+      "confidence": "established"
+    },
+    {
+      "license_a": "LGPL-2.1-only",
+      "license_b": "proprietary",
+      "linking_type": "dynamic",
+      "compatible": true,
+      "direction": "a_into_b",
+      "conditions": "Proprietary software may dynamically link to LGPL-2.1 libraries. You must allow users to re-link with modified versions of the LGPL library (dynamic linking satisfies this by default). Distribute the LGPL library source or provide a written offer. Include copyright notices.",
+      "confidence": "established"
+    },
+    {
+      "license_a": "LGPL-2.1-only",
+      "license_b": "proprietary",
+      "linking_type": "static",
+      "compatible": true,
+      "direction": "a_into_b",
+      "conditions": "Static linking is permitted but you must provide object files or equivalent for your proprietary code sufficient to re-link with a modified version of the LGPL library (Section 6a), or use a shared library mechanism (Section 6b). Distribute LGPL library source. This is more burdensome than dynamic linking.",
+      "confidence": "established"
+    },
+    {
+      "license_a": "LGPL-3.0-only",
+      "license_b": "proprietary",
+      "linking_type": "dynamic",
+      "compatible": true,
+      "direction": "a_into_b",
+      "conditions": "Proprietary software may dynamically link to LGPL-3.0 libraries. You must allow re-linking with modified library versions and provide Installation Information (per GPL-3.0 Section 6) if distributing in User Products. Distribute library source under LGPL-3.0.",
+      "confidence": "established"
+    },
+    {
+      "license_a": "LGPL-3.0-only",
+      "license_b": "proprietary",
+      "linking_type": "static",
+      "compatible": true,
+      "direction": "a_into_b",
+      "conditions": "Static linking is permitted. You must provide Minimal Corresponding Source (the LGPL library source, headers, and linking scripts) plus Installation Information for User Products. Convey object code in a form that allows re-linking per LGPL-3.0 Section 4.",
+      "confidence": "established"
+    },
+    {
+      "license_a": "MPL-2.0",
+      "license_b": "proprietary",
+      "linking_type": "any",
+      "compatible": true,
+      "direction": "a_into_b",
+      "conditions": "MPL-2.0 is file-level copyleft. Proprietary code in separate files can be combined with MPL-2.0 files in a Larger Work. Modified MPL-2.0 files must remain under MPL-2.0 and source must be made available. Your proprietary files are not affected.",
+      "confidence": "established"
+    },
+    {
+      "license_a": "EPL-2.0",
+      "license_b": "proprietary",
+      "linking_type": "any",
+      "compatible": true,
+      "direction": "a_into_b",
+      "conditions": "EPL-2.0 is module-level copyleft. Proprietary modules can be combined with EPL-2.0 modules in a product. Modified EPL-2.0 modules must have source made available. Your proprietary modules in separate source code modules are not affected.",
+      "confidence": "established"
+    },
+    {
+      "license_a": "GPL-2.0-only",
+      "license_b": "GPL-3.0-only",
+      "linking_type": "any",
+      "compatible": false,
+      "direction": "bidirectional",
+      "conditions": "Incompatible. GPL-2.0-only (without the 'or later' option) requires distribution under GPL version 2 exactly. GPL-3.0-only requires version 3 exactly. Neither license permits distribution under the other's terms. The 'or later' upgrade path is not available.",
+      "confidence": "established"
+    },
+    {
+      "license_a": "GPL-2.0-or-later",
+      "license_b": "GPL-3.0-or-later",
+      "linking_type": "any",
+      "compatible": true,
+      "direction": "a_into_b",
+      "conditions": "GPL-2.0-or-later code can be upgraded to GPL-3.0 via the 'or any later version' clause, allowing combination with GPL-3.0-or-later code. Combined work distributed under GPL-3.0-or-later.",
+      "confidence": "established"
+    },
+    {
+      "license_a": "AGPL-3.0-only",
+      "license_b": "proprietary",
+      "linking_type": "any",
+      "compatible": false,
+      "direction": "bidirectional",
+      "conditions": "Incompatible. AGPL-3.0 requires that all users interacting over a network receive access to the Corresponding Source of the entire combined work. This is fundamentally incompatible with proprietary licensing. Even server-side use without distribution triggers the copyleft obligation.",
+      "confidence": "established"
+    },
+    {
+      "license_a": "GPL-3.0-only",
+      "license_b": "proprietary",
+      "linking_type": "any",
+      "compatible": false,
+      "direction": "bidirectional",
+      "conditions": "Incompatible. GPL-3.0 requires the entire combined work to be licensed under GPL-3.0, including complete Corresponding Source. Proprietary code cannot satisfy this requirement while remaining proprietary.",
+      "confidence": "established"
+    },
+    {
+      "license_a": "AGPL-3.0-only",
+      "license_b": "GPL-3.0-only",
+      "linking_type": "any",
+      "compatible": true,
+      "direction": "a_into_b",
+      "conditions": "AGPL-3.0 Section 13 explicitly permits combining AGPL code with GPL-3.0 code. The combined work is governed by AGPL-3.0 (the network-use provision extends to the whole). GPL-3.0 code in the combination gains AGPL's network copyleft obligation.",
+      "confidence": "established"
+    },
+    {
+      "license_a": "MPL-2.0",
+      "license_b": "GPL-2.0-or-later",
+      "linking_type": "any",
+      "compatible": true,
+      "direction": "a_into_b",
+      "conditions": "MPL-2.0 Section 3.3 explicitly permits distributing MPL-2.0 code under GPL-2.0+, LGPL-2.1+, or AGPL-3.0. The MPL-2.0 code becomes subject to the GPL's terms in the combined work.",
+      "confidence": "established"
+    },
+    {
+      "license_a": "EUPL-1.2",
+      "license_b": "GPL-2.0-or-later",
+      "linking_type": "any",
+      "compatible": true,
+      "direction": "a_into_b",
+      "conditions": "EUPL-1.2 Appendix lists GPL-2.0-or-later as a compatible license. EUPL code can be relicensed under GPL-2.0+ when incorporated into a GPL-licensed Larger Work, per EUPL Article 5 compatibility mechanism.",
+      "confidence": "established"
+    },
+    {
+      "license_a": "EUPL-1.2",
+      "license_b": "Apache-2.0",
+      "linking_type": "any",
+      "compatible": false,
+      "direction": "bidirectional",
+      "conditions": "Incompatible. Apache-2.0 is not listed in the EUPL-1.2 Appendix of compatible licenses. EUPL's copyleft requires derivative works to be distributed under EUPL or a listed compatible license. Apache-2.0 is permissive and does not meet EUPL's copyleft requirements.",
+      "confidence": "established"
+    },
+    {
+      "license_a": "CC0-1.0",
+      "license_b": "any",
+      "linking_type": "any",
+      "compatible": true,
+      "direction": "a_into_b",
+      "conditions": "CC0-1.0 waives all copyright and related rights to the fullest extent permitted by law, with a fallback permissive license. CC0 code can be incorporated into any project under any license with no conditions. Note: CC0 does not grant patent licenses.",
+      "confidence": "established"
+    },
+    {
+      "license_a": "Unlicense",
+      "license_b": "any",
+      "linking_type": "any",
+      "compatible": true,
+      "direction": "a_into_b",
+      "conditions": "The Unlicense dedicates the work to the public domain and provides a fallback permissive license. Unlicensed code can be incorporated into any project under any license with no conditions. Note: some jurisdictions do not recognize public domain dedications; the fallback license covers those cases.",
+      "confidence": "established"
+    }
+  ]
+}
