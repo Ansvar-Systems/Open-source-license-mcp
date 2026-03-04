@@ -64,8 +64,7 @@ export function compareLicenses(db: Db, args: CompareLicensesArgs) {
 
   if (!rowA && !rowB) {
     return {
-      content: [{ type: 'text' as const, text: JSON.stringify({ error: `Neither license found: ${args.license_a}, ${args.license_b}` }) }],
-      isError: true,
+      error: `Neither license found: ${args.license_a}, ${args.license_b}`,
       _error_type: 'NO_MATCH',
       ...responseMeta(),
     };
@@ -73,8 +72,7 @@ export function compareLicenses(db: Db, args: CompareLicensesArgs) {
 
   if (!rowA) {
     return {
-      content: [{ type: 'text' as const, text: JSON.stringify({ error: `License not found: ${args.license_a}` }) }],
-      isError: true,
+      error: `License not found: ${args.license_a}`,
       _error_type: 'NO_MATCH',
       ...responseMeta(),
     };
@@ -82,8 +80,7 @@ export function compareLicenses(db: Db, args: CompareLicensesArgs) {
 
   if (!rowB) {
     return {
-      content: [{ type: 'text' as const, text: JSON.stringify({ error: `License not found: ${args.license_b}` }) }],
-      isError: true,
+      error: `License not found: ${args.license_b}`,
       _error_type: 'NO_MATCH',
       ...responseMeta(),
     };

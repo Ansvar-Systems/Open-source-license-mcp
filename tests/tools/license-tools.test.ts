@@ -50,7 +50,7 @@ describe('get_license', () => {
 
   it('returns error for unknown license', () => {
     const result = getLicense(db, { spdx_id: 'FAKE-LICENSE-1.0' });
-    expect(result.isError).toBe(true);
+    expect(result.error).toContain('FAKE-LICENSE-1.0');
     expect(result._error_type).toBe('NO_MATCH');
     expect(result._meta).toBeDefined();
   });
@@ -266,16 +266,19 @@ describe('compare_licenses', () => {
 
   it('returns error when license_a not found', () => {
     const result = compareLicenses(db, { license_a: 'FAKE-1.0', license_b: 'MIT' });
-    expect(result.isError).toBe(true);
+    expect(result.error).toContain('FAKE-1.0');
+    expect(result._error_type).toBe('NO_MATCH');
   });
 
   it('returns error when license_b not found', () => {
     const result = compareLicenses(db, { license_a: 'MIT', license_b: 'FAKE-1.0' });
-    expect(result.isError).toBe(true);
+    expect(result.error).toContain('FAKE-1.0');
+    expect(result._error_type).toBe('NO_MATCH');
   });
 
   it('returns error when neither found', () => {
     const result = compareLicenses(db, { license_a: 'FAKE-A', license_b: 'FAKE-B' });
-    expect(result.isError).toBe(true);
+    expect(result.error).toBeDefined();
+    expect(result._error_type).toBe('NO_MATCH');
   });
 });

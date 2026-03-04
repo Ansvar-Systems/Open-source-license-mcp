@@ -14,8 +14,7 @@ export function getLicense(db: Db, args: GetLicenseArgs) {
 
   if (!row) {
     return {
-      content: [{ type: 'text' as const, text: JSON.stringify({ error: `License not found: ${args.spdx_id}` }) }],
-      isError: true,
+      error: `License not found: ${args.spdx_id}`,
       _error_type: 'NO_MATCH',
       ...responseMeta(),
     };
