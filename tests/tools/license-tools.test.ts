@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: Apache-2.0
 import { describe, it, expect, beforeAll } from 'vitest';
 import BetterSqlite3 from 'better-sqlite3';
-import { execSync } from 'child_process';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -16,8 +15,7 @@ import { compareLicenses } from '../../src/tools/compare-licenses.js';
 let db: any;
 
 beforeAll(() => {
-  // Build database from seed data -- hardcoded command, no user input
-  execSync('npm run build:db', { cwd: join(__dirname, '../..'), stdio: 'pipe' });
+  // DB is built by globalSetup (tests/global-setup.ts)
   db = new BetterSqlite3(join(__dirname, '../../data/database.db'));
 });
 

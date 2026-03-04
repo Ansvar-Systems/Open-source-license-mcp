@@ -1,0 +1,142 @@
+{
+  "version": "1.0.0",
+  "tests": [
+    {
+      "id": "data-001",
+      "category": "data_retrieval",
+      "tool": "get_license",
+      "input": { "spdx_id": "MIT" },
+      "assertions": {
+        "has_field": ["spdx_id", "name", "osi_approved", "copyleft_type"],
+        "field_equals": { "spdx_id": "MIT", "osi_approved": true, "copyleft_type": "permissive" }
+      }
+    },
+    {
+      "id": "data-002",
+      "category": "data_retrieval",
+      "tool": "get_license",
+      "input": { "spdx_id": "LGPL-2.1-only" },
+      "assertions": {
+        "has_field": ["spdx_id", "copyleft_type"],
+        "field_equals": { "copyleft_type": "weak" }
+      }
+    },
+    {
+      "id": "data-003",
+      "category": "data_retrieval",
+      "tool": "get_obligation_checklist",
+      "input": { "license_id": "Apache-2.0" },
+      "assertions": {
+        "has_field": ["license_id", "obligations"],
+        "field_equals": { "license_id": "Apache-2.0" },
+        "array_min_length": { "obligations": 4 }
+      }
+    },
+    {
+      "id": "search-001",
+      "category": "search",
+      "tool": "search_licenses",
+      "input": { "query": "apache" },
+      "assertions": {
+        "has_field": ["results"],
+        "array_min_length": { "results": 1 },
+        "array_contains_field_value": { "array": "results", "field": "spdx_id", "value": "Apache-2.0" }
+      }
+    },
+    {
+      "id": "search-002",
+      "category": "search",
+      "tool": "search_reuse_rules",
+      "input": { "query": "header" },
+      "assertions": {
+        "has_field": ["results"],
+        "array_min_length": { "results": 1 }
+      }
+    },
+    {
+      "id": "compat-001",
+      "category": "compatibility",
+      "tool": "check_compatibility",
+      "input": { "license_a": "LGPL-2.1-only", "license_b": "proprietary", "linking_type": "dynamic" },
+      "assertions": {
+        "field_equals": { "compatible": true },
+        "has_field": ["conditions"]
+      }
+    },
+    {
+      "id": "compat-002",
+      "category": "compatibility",
+      "tool": "check_compatibility",
+      "input": { "license_a": "AGPL-3.0-only", "license_b": "proprietary" },
+      "assertions": {
+        "field_equals": { "compatible": false }
+      }
+    },
+    {
+      "id": "compat-003",
+      "category": "compatibility",
+      "tool": "check_compatibility",
+      "input": { "license_a": "Apache-2.0", "license_b": "GPL-2.0-only" },
+      "assertions": {
+        "field_equals": { "compatible": false }
+      }
+    },
+    {
+      "id": "neg-001",
+      "category": "negative_test",
+      "tool": "get_license",
+      "input": { "spdx_id": "FAKE-LICENSE-1.0" },
+      "assertions": {
+        "has_field": ["error"]
+      }
+    },
+    {
+      "id": "neg-002",
+      "category": "negative_test",
+      "tool": "check_compatibility",
+      "input": { "license_a": "Artistic-2.0", "license_b": "CDDL-1.0" },
+      "assertions": {
+        "field_equals": { "no_data": true }
+      }
+    },
+    {
+      "id": "meta-001",
+      "category": "meta_tool",
+      "tool": "about",
+      "input": {},
+      "assertions": {
+        "has_field": ["name", "version", "stats"],
+        "field_equals": { "name": "open-source-license-mcp" }
+      }
+    },
+    {
+      "id": "meta-002",
+      "category": "meta_tool",
+      "tool": "list_sources",
+      "input": {},
+      "assertions": {
+        "has_field": ["sources"],
+        "array_min_length": { "sources": 3 }
+      }
+    },
+    {
+      "id": "cra-001",
+      "category": "data_retrieval",
+      "tool": "get_cra_license_obligations",
+      "input": { "cra_article": "Article 13(1)(f)" },
+      "assertions": {
+        "has_field": ["obligations"],
+        "array_min_length": { "obligations": 1 }
+      }
+    },
+    {
+      "id": "notice-001",
+      "category": "data_retrieval",
+      "tool": "get_notice_template",
+      "input": { "license_id": "Apache-2.0" },
+      "assertions": {
+        "has_field": ["license_id", "required_text"]
+      }
+    }
+  ]
+}
