@@ -1,0 +1,39 @@
+{
+  "name": "@ansvar/open-source-license-mcp",
+  "version": "0.1.0",
+  "description": "Open-source license compliance MCP — SPDX licenses, compatibility matrix, REUSE spec, CRA obligations. Part of the Ansvar MCP Network (ansvar.ai/mcp)",
+  "mcpName": "eu.ansvar/open-source-license-mcp",
+  "type": "module",
+  "main": "dist/src/index.js",
+  "bin": "dist/src/index.js",
+  "scripts": {
+    "build": "tsc",
+    "build:db": "node --import tsx scripts/build-db.ts",
+    "dev": "node --import tsx src/index.ts",
+    "start": "node dist/src/index.js",
+    "start:http": "node dist/src/http-server.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:contract": "vitest run __tests__/contract/",
+    "lint": "tsc --noEmit",
+    "validate": "npm run lint && npm test && npm run test:contract"
+  },
+  "dependencies": {
+    "@ansvar/mcp-sqlite": "^1.0.3",
+    "@modelcontextprotocol/sdk": "^1.25.3"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^22.15.29",
+    "better-sqlite3": "^12.6.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^3.0.0"
+  },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ansvar-Systems/Open-source-license-mcp"
+  },
+  "keywords": ["mcp", "open-source", "license", "spdx", "compliance", "reuse", "cra"]
+}
