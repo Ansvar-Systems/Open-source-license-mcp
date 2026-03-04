@@ -1,0 +1,132 @@
+{
+  "version": "1.0.0",
+  "source": "EU Cyber Resilience Act (Regulation (EU) 2024/2847)",
+  "entries": [
+    {
+      "cra_article": "Article 13(1)(f)",
+      "license_type": "permissive",
+      "obligation": "SBOM must include SPDX license identifiers for all components",
+      "description": "The software bill of materials required by Article 13(1)(f) must identify all open-source components and their license identifiers. For permissive licenses (MIT, Apache-2.0, BSD), this is a straightforward inclusion of the SPDX-License-Identifier in the SBOM entry.",
+      "compliance_action": "Include the SPDX-License-Identifier for every open-source component in the SBOM. Use CycloneDX or SPDX SBOM format with license fields populated."
+    },
+    {
+      "cra_article": "Article 13(1)(f)",
+      "license_type": "GPL-2.0-only",
+      "obligation": "SBOM must identify copyleft obligations and source availability",
+      "description": "For GPL-2.0 components, the SBOM must include the license identifier and the manufacturer must ensure source code availability obligations are met. The SBOM serves as the index for identifying which components trigger source disclosure requirements.",
+      "compliance_action": "Include SPDX-License-Identifier: GPL-2.0-only in the SBOM. Document the source code availability mechanism (bundled source, written offer, or download URL) for each GPL-2.0 component."
+    },
+    {
+      "cra_article": "Article 13(1)(f)",
+      "license_type": "GPL-3.0-only",
+      "obligation": "SBOM must identify copyleft and patent grant implications",
+      "description": "For GPL-3.0 components, the SBOM must include the license identifier. The manufacturer must also ensure compliance with the GPL-3.0 patent grant and anti-tivoization provisions, which may affect how security updates are delivered to end users.",
+      "compliance_action": "Include SPDX-License-Identifier: GPL-3.0-only in the SBOM. Document source availability and verify that the product does not impose technical measures preventing users from installing modified GPL-3.0 components."
+    },
+    {
+      "cra_article": "Article 13(1)(f)",
+      "license_type": "LGPL-2.1-only",
+      "obligation": "SBOM must document linking type for LGPL components",
+      "description": "The SBOM required by Article 13(1)(f) must include SPDX-License-Identifier for all components. For LGPL-2.1 components, the SBOM should also document the linking type (static or dynamic) as this affects the end user's re-linking rights under the license.",
+      "compliance_action": "Include SPDX-License-Identifier: LGPL-2.1-only in the SBOM. Document the linking type (static/dynamic) in the technical documentation (Annex VII) and ensure relinking capability is preserved."
+    },
+    {
+      "cra_article": "Article 13(1)(f)",
+      "license_type": "AGPL-3.0-only",
+      "obligation": "SBOM must flag network-disclosure components",
+      "description": "AGPL-3.0 components trigger source disclosure for network interactions. The SBOM must identify these components so the manufacturer can verify that source code is available to network users of the product.",
+      "compliance_action": "Include SPDX-License-Identifier: AGPL-3.0-only in the SBOM. Flag these components as requiring network source disclosure. Provide a source download mechanism accessible to network users."
+    },
+    {
+      "cra_article": "Article 13(1)(f)",
+      "license_type": "MPL-2.0",
+      "obligation": "SBOM must identify per-file copyleft scope",
+      "description": "MPL-2.0 has file-level copyleft. The SBOM must identify MPL-2.0 components. If any MPL-2.0 files were modified, the manufacturer must make the source of those specific files available.",
+      "compliance_action": "Include SPDX-License-Identifier: MPL-2.0 in the SBOM. If MPL-2.0 files were modified, document which files were changed and provide their source."
+    },
+    {
+      "cra_article": "Article 13(6)",
+      "license_type": "copyleft",
+      "obligation": "Vulnerability disclosure must account for copyleft source obligations",
+      "description": "Article 13(6) requires manufacturers to share vulnerability information with ENISA and affected users. When a vulnerability is in a copyleft-licensed component, the manufacturer must coordinate disclosure with the upstream open-source project, as the fix must also be released under the same copyleft license.",
+      "compliance_action": "Establish a coordinated vulnerability disclosure process that includes upstream open-source maintainers. When patching copyleft components, release the fix under the same license and contribute patches upstream."
+    },
+    {
+      "cra_article": "Article 13(6)",
+      "license_type": "permissive",
+      "obligation": "Vulnerability fixes for permissive-licensed components may be kept proprietary",
+      "description": "When a vulnerability is discovered in a permissive-licensed component (MIT, Apache-2.0, BSD), the manufacturer may fix the vulnerability and distribute the patched version without source disclosure. However, contributing fixes upstream is good practice and reduces maintenance burden.",
+      "compliance_action": "Fix the vulnerability and report to ENISA per Article 13(6) timelines. Contributing the fix upstream is recommended but not legally required by the license."
+    },
+    {
+      "cra_article": "Article 13(8)",
+      "license_type": "GPL-3.0-only",
+      "obligation": "Security updates during support period must respect copyleft and anti-tivoization",
+      "description": "Article 13(8) requires manufacturers to provide security updates for the expected product lifetime (minimum 5 years). For products containing GPL-3.0 components, security updates must not introduce technical measures that prevent users from installing modified versions of the GPL-3.0 components (anti-tivoization, Section 6).",
+      "compliance_action": "Design the update mechanism to allow user installation of modified GPL-3.0 components. Provide installation information as required by GPL-3.0 Section 6. Do not use secure boot or code signing to lock out modified GPL-3.0 components unless the signing keys are provided."
+    },
+    {
+      "cra_article": "Article 13(8)",
+      "license_type": "copyleft",
+      "obligation": "Security update source code must be released under the same license",
+      "description": "When providing security updates for copyleft-licensed components during the support period, the updated source code must be made available under the same copyleft license. This applies to GPL, LGPL, AGPL, MPL, and EUPL components.",
+      "compliance_action": "Release the source code of all security update patches for copyleft components under the original component license. Maintain a source distribution mechanism for the entire support period."
+    },
+    {
+      "cra_article": "Article 13(8)",
+      "license_type": "LGPL-2.1-only",
+      "obligation": "Security updates must preserve relinking capability",
+      "description": "When shipping security updates that include LGPL-2.1 components, the manufacturer must continue to provide the means for end users to relink the application with a modified version of the LGPL library. The update process must not break this capability.",
+      "compliance_action": "Ensure the update mechanism preserves dynamic linking or continues to provide object files sufficient for relinking. Do not convert from dynamic to static linking in updates without providing relinking materials."
+    },
+    {
+      "cra_article": "Article 24",
+      "license_type": "any",
+      "obligation": "Open-source software stewards must exercise due diligence for cybersecurity",
+      "description": "Article 24 defines obligations for open-source software stewards (foundations, non-profits that systematically support open-source development). Stewards must establish a cybersecurity policy, cooperate with market surveillance authorities, and report actively exploited vulnerabilities. Stewards are subject to lighter obligations than commercial manufacturers.",
+      "compliance_action": "If your organization qualifies as an open-source software steward, establish a documented cybersecurity policy covering vulnerability handling and disclosure. Register with ENISA for vulnerability reporting. Stewards are not subject to product conformity requirements but must cooperate with authorities."
+    },
+    {
+      "cra_article": "Article 24",
+      "license_type": "copyleft",
+      "obligation": "Steward vulnerability reporting does not override license terms",
+      "description": "An open-source software steward's obligation to report vulnerabilities under Article 24 does not change the license terms of the software. Copyleft obligations still apply to downstream users and manufacturers. The steward's reporting obligation is separate from any license compliance requirement.",
+      "compliance_action": "Report actively exploited vulnerabilities to ENISA per Article 24. License compliance (source disclosure, copyleft) remains the responsibility of each downstream manufacturer incorporating the software."
+    },
+    {
+      "cra_article": "Annex I, Part II, Section 1",
+      "license_type": "any",
+      "obligation": "Products must be delivered without known exploitable vulnerabilities",
+      "description": "Annex I, Part II, Section 1 requires that products with digital elements are delivered without known exploitable vulnerabilities. This applies regardless of the license of the components. The manufacturer must scan all open-source dependencies for known vulnerabilities and remediate them before placing the product on the market.",
+      "compliance_action": "Run vulnerability scans (CVE databases, security advisories) against all open-source components listed in the SBOM. Remediate or mitigate all known exploitable vulnerabilities before release. Document the vulnerability assessment in the technical file."
+    },
+    {
+      "cra_article": "Annex I, Part II, Section 1",
+      "license_type": "copyleft",
+      "obligation": "Vulnerability remediation in copyleft components requires license-compliant patching",
+      "description": "When remediating vulnerabilities in copyleft-licensed components to meet Annex I requirements, the manufacturer must ensure patches comply with the component's license. Modified copyleft code must be made available under the same license, and the manufacturer cannot use vulnerability remediation as a justification to circumvent copyleft obligations.",
+      "compliance_action": "Apply security patches to copyleft components and release the patched source under the same license. Do not strip copyleft headers or change license terms when remediating vulnerabilities."
+    },
+    {
+      "cra_article": "Annex VII",
+      "license_type": "any",
+      "obligation": "Technical documentation must include a complete SBOM with license information",
+      "description": "Annex VII requires the technical documentation to include an SBOM that covers at minimum the top-level dependencies of the product. The SBOM must be in a machine-readable format (SPDX or CycloneDX recommended) and include component names, versions, and license identifiers.",
+      "compliance_action": "Generate an SBOM in CycloneDX or SPDX format. Include it in the technical documentation file. Ensure every component has a populated license field using SPDX identifiers. Update the SBOM with each product release."
+    },
+    {
+      "cra_article": "Annex VII",
+      "license_type": "copyleft",
+      "obligation": "Technical documentation must describe copyleft compliance measures",
+      "description": "For products containing copyleft-licensed components, Annex VII technical documentation should describe how the manufacturer meets the source code availability and relinking obligations imposed by those licenses. This demonstrates that the product's open-source usage is legally sound.",
+      "compliance_action": "Include a section in the technical documentation describing: (1) which components are copyleft-licensed, (2) how source code is made available, (3) how relinking is enabled for LGPL components, and (4) how the update mechanism preserves these rights."
+    },
+    {
+      "cra_article": "Annex VII",
+      "license_type": "LGPL-2.1-only",
+      "obligation": "Technical documentation must describe linking architecture for LGPL components",
+      "description": "When the product uses LGPL-2.1 components, Annex VII documentation should describe the linking architecture (static vs. dynamic) and how the user can exercise their right to relink with a modified library version. This is both a CRA documentation requirement and an LGPL compliance requirement.",
+      "compliance_action": "Document in the technical file: the linking type for each LGPL component, instructions for relinking, and the location of object files or shared libraries needed for relinking."
+    }
+  ]
+}

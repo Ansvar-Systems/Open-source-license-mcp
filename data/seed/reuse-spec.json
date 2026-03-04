@@ -1,0 +1,167 @@
+{
+  "version": "3.3",
+  "source": "REUSE Specification 3.3 (FSFE)",
+  "entries": [
+    {
+      "rule_type": "header_format",
+      "file_pattern": "*.py",
+      "language": "Python",
+      "description": "Python files should include SPDX headers as comments at the top of the file, before any code or docstrings",
+      "example": "# SPDX-FileCopyrightText: 2026 Your Name <email@example.com>\n# SPDX-License-Identifier: Apache-2.0"
+    },
+    {
+      "rule_type": "header_format",
+      "file_pattern": "*.ts",
+      "language": "TypeScript",
+      "description": "TypeScript files should include SPDX headers as line comments at the top of the file",
+      "example": "// SPDX-FileCopyrightText: 2026 Your Name <email@example.com>\n// SPDX-License-Identifier: MIT"
+    },
+    {
+      "rule_type": "header_format",
+      "file_pattern": "*.js",
+      "language": "JavaScript",
+      "description": "JavaScript files should include SPDX headers as line comments at the top of the file",
+      "example": "// SPDX-FileCopyrightText: 2026 Your Name <email@example.com>\n// SPDX-License-Identifier: MIT"
+    },
+    {
+      "rule_type": "header_format",
+      "file_pattern": "*.c",
+      "language": "C",
+      "description": "C source files should include SPDX headers as line comments or block comments at the top of the file",
+      "example": "// SPDX-FileCopyrightText: 2026 Your Name <email@example.com>\n// SPDX-License-Identifier: GPL-2.0-only"
+    },
+    {
+      "rule_type": "header_format",
+      "file_pattern": "*.cpp",
+      "language": "C++",
+      "description": "C++ source files should include SPDX headers as line comments at the top of the file",
+      "example": "// SPDX-FileCopyrightText: 2026 Your Name <email@example.com>\n// SPDX-License-Identifier: GPL-3.0-only"
+    },
+    {
+      "rule_type": "header_format",
+      "file_pattern": "*.h",
+      "language": "C/C++ Header",
+      "description": "C and C++ header files should include SPDX headers as line comments, placed before include guards or pragma once",
+      "example": "// SPDX-FileCopyrightText: 2026 Your Name <email@example.com>\n// SPDX-License-Identifier: LGPL-2.1-only"
+    },
+    {
+      "rule_type": "header_format",
+      "file_pattern": "*.java",
+      "language": "Java",
+      "description": "Java files should include SPDX headers as line comments at the top of the file, before the package declaration",
+      "example": "// SPDX-FileCopyrightText: 2026 Your Name <email@example.com>\n// SPDX-License-Identifier: Apache-2.0"
+    },
+    {
+      "rule_type": "header_format",
+      "file_pattern": "*.rs",
+      "language": "Rust",
+      "description": "Rust files should include SPDX headers as line comments at the top of the file",
+      "example": "// SPDX-FileCopyrightText: 2026 Your Name <email@example.com>\n// SPDX-License-Identifier: MIT OR Apache-2.0"
+    },
+    {
+      "rule_type": "header_format",
+      "file_pattern": "*.go",
+      "language": "Go",
+      "description": "Go files should include SPDX headers as line comments at the top of the file, before the package declaration",
+      "example": "// SPDX-FileCopyrightText: 2026 Your Name <email@example.com>\n// SPDX-License-Identifier: BSD-3-Clause"
+    },
+    {
+      "rule_type": "header_format",
+      "file_pattern": "*.sh",
+      "language": "Shell",
+      "description": "Shell scripts should include SPDX headers after the shebang line",
+      "example": "#!/bin/bash\n# SPDX-FileCopyrightText: 2026 Your Name <email@example.com>\n# SPDX-License-Identifier: GPL-3.0-or-later"
+    },
+    {
+      "rule_type": "header_format",
+      "file_pattern": "*.yaml",
+      "language": "YAML",
+      "description": "YAML files should include SPDX headers as comments at the top of the file",
+      "example": "# SPDX-FileCopyrightText: 2026 Your Name <email@example.com>\n# SPDX-License-Identifier: CC-BY-4.0"
+    },
+    {
+      "rule_type": "header_format",
+      "file_pattern": "*.yml",
+      "language": "YAML",
+      "description": "YAML files (with .yml extension) follow the same header format as .yaml files",
+      "example": "# SPDX-FileCopyrightText: 2026 Your Name <email@example.com>\n# SPDX-License-Identifier: CC-BY-4.0"
+    },
+    {
+      "rule_type": "header_format",
+      "file_pattern": "*.md",
+      "language": "Markdown",
+      "description": "Markdown files should include SPDX headers as HTML comments at the top of the file",
+      "example": "<!--\nSPDX-FileCopyrightText: 2026 Your Name <email@example.com>\nSPDX-License-Identifier: CC-BY-SA-4.0\n-->"
+    },
+    {
+      "rule_type": "header_format",
+      "file_pattern": "*.css",
+      "language": "CSS",
+      "description": "CSS files should include SPDX headers as block comments at the top of the file",
+      "example": "/*\n * SPDX-FileCopyrightText: 2026 Your Name <email@example.com>\n * SPDX-License-Identifier: MIT\n */"
+    },
+    {
+      "rule_type": "header_format",
+      "file_pattern": "*.html",
+      "language": "HTML",
+      "description": "HTML files should include SPDX headers as HTML comments at the top of the file, before the DOCTYPE declaration",
+      "example": "<!--\nSPDX-FileCopyrightText: 2026 Your Name <email@example.com>\nSPDX-License-Identifier: MIT\n-->"
+    },
+    {
+      "rule_type": "dep5_format",
+      "file_pattern": ".reuse/dep5",
+      "language": null,
+      "description": "The .reuse/dep5 file provides bulk licensing for files that cannot contain headers (binaries, data files, generated code). It uses the DEP-5 / machine-readable debian/copyright format. Each paragraph specifies a glob pattern and the associated copyright and license",
+      "example": "Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/\nUpstream-Name: My Project\nUpstream-Contact: maintainer@example.com\n\nFiles: assets/*\nCopyright: 2026 Your Name <email@example.com>\nLicense: CC-BY-4.0\n\nFiles: data/*.json\nCopyright: 2026 Your Name <email@example.com>\nLicense: MIT"
+    },
+    {
+      "rule_type": "spdx_expression_syntax",
+      "file_pattern": null,
+      "language": null,
+      "description": "SPDX license expressions support combining licenses with AND, OR, and WITH operators. AND means all licenses apply simultaneously. OR means the licensee can choose. WITH adds a license exception. Parentheses group sub-expressions",
+      "example": "# Single license:\n# SPDX-License-Identifier: MIT\n\n# Dual license (user chooses):\n# SPDX-License-Identifier: MIT OR Apache-2.0\n\n# Both apply:\n# SPDX-License-Identifier: GPL-2.0-only AND MIT\n\n# License with exception:\n# SPDX-License-Identifier: GPL-2.0-only WITH Classpath-exception-2.0\n\n# Complex expression:\n# SPDX-License-Identifier: (MIT OR Apache-2.0) AND BSD-3-Clause"
+    },
+    {
+      "rule_type": "compliance_criteria",
+      "file_pattern": null,
+      "language": null,
+      "description": "A project is REUSE-compliant when every file in the repository has a license and copyright associated with it — either via an SPDX header in the file itself, a .license companion file, or a .reuse/dep5 entry. The project must also include the full license text for every license used, stored in the LICENSES/ directory using SPDX identifiers as filenames (e.g., LICENSES/MIT.txt)",
+      "example": "project/\n  LICENSES/\n    MIT.txt\n    Apache-2.0.txt\n  .reuse/\n    dep5\n  src/\n    main.py          (has SPDX header)\n  assets/\n    logo.png          (covered by .reuse/dep5)\n  README.md            (has SPDX HTML comment header)"
+    },
+    {
+      "rule_type": "binary_file_handling",
+      "file_pattern": "*.png, *.jpg, *.gif, *.ico, *.woff, *.woff2, *.pdf",
+      "language": null,
+      "description": "Binary files cannot contain SPDX headers. Use one of two approaches: (1) create a companion .license file next to the binary (e.g., logo.png.license), or (2) add a .reuse/dep5 entry that covers the binary via a glob pattern. The companion .license file approach is preferred for individual files; dep5 is better for entire directories of binaries",
+      "example": "# Companion file approach:\n# Create logo.png.license with:\nSPDX-FileCopyrightText: 2026 Your Name <email@example.com>\nSPDX-License-Identifier: CC-BY-4.0\n\n# dep5 approach:\nFiles: assets/*.png\nCopyright: 2026 Your Name <email@example.com>\nLicense: CC-BY-4.0"
+    },
+    {
+      "rule_type": "generated_file_handling",
+      "file_pattern": null,
+      "language": null,
+      "description": "Generated files (build outputs, lock files, minified bundles) should be covered by .reuse/dep5 rather than modifying the generation process to inject headers. If generated files are committed to the repository, they must be covered. If they are in .gitignore, they do not need coverage. Lock files (package-lock.json, yarn.lock) can be covered by dep5",
+      "example": "# In .reuse/dep5:\nFiles: dist/*\nCopyright: 2026 Your Name <email@example.com>\nLicense: MIT\n\nFiles: package-lock.json\nCopyright: 2026 Your Name <email@example.com>\nLicense: MIT"
+    },
+    {
+      "rule_type": "license_file_placement",
+      "file_pattern": "LICENSES/*.txt",
+      "language": null,
+      "description": "Full license texts must be stored in the LICENSES/ directory at the project root. Each file must be named using the SPDX identifier followed by .txt (e.g., LICENSES/MIT.txt, LICENSES/Apache-2.0.txt). License texts can be obtained from the SPDX license list or the reuse tool's download command",
+      "example": "LICENSES/\n  MIT.txt\n  Apache-2.0.txt\n  CC-BY-4.0.txt\n  GPL-3.0-only.txt"
+    },
+    {
+      "rule_type": "copyright_format",
+      "file_pattern": null,
+      "language": null,
+      "description": "The SPDX-FileCopyrightText tag supports multiple formats: a year and name, a year range and name, or just a name. Multiple copyright holders are expressed as multiple SPDX-FileCopyrightText lines. The email address is optional but recommended",
+      "example": "# Single holder:\n# SPDX-FileCopyrightText: 2026 Jane Smith <jane@example.com>\n\n# Year range:\n# SPDX-FileCopyrightText: 2020-2026 Jane Smith\n\n# Multiple holders:\n# SPDX-FileCopyrightText: 2024 Original Author\n# SPDX-FileCopyrightText: 2026 New Contributor <new@example.com>"
+    },
+    {
+      "rule_type": "license_companion_file",
+      "file_pattern": "*.license",
+      "language": null,
+      "description": "Any file can have a companion .license file placed next to it, containing the SPDX-FileCopyrightText and SPDX-License-Identifier tags. This is an alternative to in-file headers and .reuse/dep5. The companion file takes the original filename with .license appended (e.g., image.png.license)",
+      "example": "# Contents of image.png.license:\nSPDX-FileCopyrightText: 2026 Your Name <email@example.com>\nSPDX-License-Identifier: CC-BY-4.0"
+    }
+  ]
+}

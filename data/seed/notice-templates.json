@@ -1,0 +1,75 @@
+{
+  "version": "1.0.0",
+  "entries": [
+    {
+      "license_id": "MIT",
+      "required_text": "Copyright (c) [year] [copyright holder]\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.",
+      "attribution_format": "Include the full MIT license text with the original copyright line. The copyright notice and permission notice are the only required attribution elements.",
+      "modification_marking": null,
+      "example": "The following software is included under the MIT License:\n\nlodash 4.17.21\nCopyright (c) JS Foundation and other contributors\nhttps://js.foundation/\n\nPermission is hereby granted, free of charge, ..."
+    },
+    {
+      "license_id": "Apache-2.0",
+      "required_text": "Copyright [year] [copyright holder]\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    http://www.apache.org/licenses/LICENSE-2.0",
+      "attribution_format": "Include the original NOTICE file contents (if one exists) in your own NOTICE file or equivalent. The NOTICE file is additive: you append your own attributions but must not remove the original contents. Include the full Apache-2.0 license text separately in a LICENSE file.",
+      "modification_marking": "Modified files must carry prominent notices stating that you changed them. This can be done in the file header, a CHANGELOG, or the NOTICE file.",
+      "example": "Apache Commons Lang\nCopyright 2001-2026 The Apache Software Foundation\n\nThis product includes software developed at\nThe Apache Software Foundation (https://www.apache.org/).\n\nThe <exclude> element of the Ant-like file pattern matching is based on\ncode from Apache Ant, Copyright 1999-2006 The Apache Software Foundation."
+    },
+    {
+      "license_id": "BSD-2-Clause",
+      "required_text": "Copyright (c) [year] [copyright holder]\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.\n2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.",
+      "attribution_format": "Include the copyright notice and the two conditions in your LICENSE file or in the documentation shipped with the binary distribution.",
+      "modification_marking": null,
+      "example": "This product includes software developed by:\n\nnpm/semver\nCopyright (c) Isaac Z. Schlueter and Contributors\nAll rights reserved.\n\n(BSD-2-Clause license text follows)"
+    },
+    {
+      "license_id": "BSD-3-Clause",
+      "required_text": "Copyright (c) [year] [copyright holder]\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.\n2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.\n3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.",
+      "attribution_format": "Include the copyright notice and all three conditions in your LICENSE file or in the documentation shipped with the binary distribution. The third clause restricts use of the project name for endorsement.",
+      "modification_marking": null,
+      "example": "This product includes software developed by:\n\nd3-scale\nCopyright 2010-2026 Mike Bostock\nAll rights reserved.\n\n(BSD-3-Clause license text follows)"
+    },
+    {
+      "license_id": "GPL-2.0-only",
+      "required_text": "Copyright (C) [year] [copyright holder]\n\nThis program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; version 2 of the License.\n\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.",
+      "attribution_format": "Include the complete GPL-2.0 license text. Each source file should carry a copyright header referencing the GPL. For binary distributions, include the license text in the documentation and provide the corresponding source code.",
+      "modification_marking": "Modified files must carry prominent notices stating that you changed the files and the date of any change (Section 2a).",
+      "example": "This product includes software licensed under the GNU General Public License v2:\n\nLinux kernel modules\nCopyright (C) Linus Torvalds and contributors\n\nSource code is available at: https://example.com/source\n\nSee COPYING for the full GPL-2.0 license text."
+    },
+    {
+      "license_id": "GPL-3.0-only",
+      "required_text": "Copyright (C) [year] [copyright holder]\n\nThis program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 3 of the License.\n\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.",
+      "attribution_format": "Include the complete GPL-3.0 license text. Each source file should carry a copyright header referencing the GPL. For binary distributions, include the license text and provide the Corresponding Source. Interactive programs must display a notice at startup.",
+      "modification_marking": "Modified files must carry prominent notices giving the date of change (Section 5a). The work must carry notices stating it is released under GPL-3.0 and that there is no warranty.",
+      "example": "This product includes software licensed under the GNU General Public License v3:\n\nGCC Runtime Library\nCopyright (C) Free Software Foundation, Inc.\n\nCorresponding Source is available at: https://example.com/source\n\nSee COPYING for the full GPL-3.0 license text."
+    },
+    {
+      "license_id": "LGPL-2.1-only",
+      "required_text": "Copyright (C) [year] [copyright holder]\n\nThis library is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation; version 2.1 of the License.\n\nThis library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.",
+      "attribution_format": "Include both the LGPL-2.1 and GPL-2.0 license texts (LGPL-2.1 incorporates GPL-2.0 by reference). For applications that link to the LGPL library, include the library's copyright notice and license reference in your NOTICE or attribution file.",
+      "modification_marking": "If you modify the library, you must give prominent notice that you have changed it and give the date of the change (Section 2d).",
+      "example": "This product uses the following LGPL-2.1 library:\n\nGNU C Library (glibc)\nCopyright (C) Free Software Foundation, Inc.\n\nThe library source code is available at: https://example.com/source\nRelinking instructions: link dynamically against libglibc.so\n\nSee COPYING.LIB for the full LGPL-2.1 license text."
+    },
+    {
+      "license_id": "LGPL-3.0-only",
+      "required_text": "Copyright (C) [year] [copyright holder]\n\nThis library is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation, version 3 of the License.\n\nThis library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.",
+      "attribution_format": "Include both the LGPL-3.0 and GPL-3.0 license texts (LGPL-3.0 is defined as additional permissions on top of GPL-3.0). For applications that link to the LGPL library, include the library's copyright notice and provide installation information (Section 6 of GPL-3.0 via LGPL-3.0).",
+      "modification_marking": "If you modify the library, the modified version must carry prominent notices stating that the library was changed and the date of the change.",
+      "example": "This product uses the following LGPL-3.0 library:\n\nQt Framework\nCopyright (C) The Qt Company Ltd.\n\nThe library source code is available at: https://example.com/source\nRelinking instructions: link dynamically against libQt6Core.so\n\nSee COPYING.LESSER for the LGPL-3.0 text and COPYING for the GPL-3.0 text."
+    },
+    {
+      "license_id": "MPL-2.0",
+      "required_text": "This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at https://mozilla.org/MPL/2.0/.",
+      "attribution_format": "Retain the MPL-2.0 header in each covered source file. Include the full MPL-2.0 license text in your distribution. The copyleft scope is per-file: only modified MPL files need their source disclosed, not the entire project.",
+      "modification_marking": "Modified MPL-2.0 files must continue to carry the MPL header. The source of the modified file must be made available under the MPL-2.0.",
+      "example": "This product includes files licensed under the Mozilla Public License 2.0:\n\nRust standard library components\nCopyright (c) Mozilla Foundation and contributors\n\nSource code for MPL-2.0 files is available at: https://example.com/source\n\nSee LICENSE-MPL for the full MPL-2.0 license text."
+    },
+    {
+      "license_id": "EUPL-1.2",
+      "required_text": "Copyright (c) [year] [copyright holder]\n\nLicensed under the EUPL, Version 1.2 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the \"Licence\");\nYou may not use this work except in compliance with the Licence.\nYou may obtain a copy of the Licence at: https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12",
+      "attribution_format": "Include the EUPL-1.2 license text (in your chosen language version — all 23 EU language versions are equally valid). Retain all copyright notices and license headers in source files.",
+      "modification_marking": "Modified versions must carry prominent notices stating that the work has been modified and the date of modification (Article 5).",
+      "example": "This product includes software licensed under the European Union Public Licence v1.2:\n\nOpenPeppol Components\nCopyright (c) European Commission\n\nSource code is available at: https://example.com/source\n\nSee LICENCE-EUPL for the full EUPL-1.2 licence text."
+    }
+  ]
+}

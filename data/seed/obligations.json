@@ -1,0 +1,383 @@
+{
+  "version": "1.0.0",
+  "entries": [
+    {
+      "license_id": "MIT",
+      "obligation_type": "attribution",
+      "required": true,
+      "description": "Include the copyright notice and permission notice in all copies or substantial portions of the software",
+      "compliance_action": "Copy the MIT license text (including the copyright line) into your LICENSE file, NOTICE file, or documentation distributed with the software"
+    },
+    {
+      "license_id": "MIT",
+      "obligation_type": "notice",
+      "required": true,
+      "description": "The full license text must accompany the software in all distributions, whether source or binary",
+      "compliance_action": "Include the complete MIT license text in your distribution. A LICENSE file in the repository root is sufficient for source distributions; for binaries, include it in documentation or a notices directory"
+    },
+    {
+      "license_id": "Apache-2.0",
+      "obligation_type": "attribution",
+      "required": true,
+      "description": "Retain all copyright, patent, trademark, and attribution notices from the original source",
+      "compliance_action": "Preserve all existing copyright headers in source files. Include the original NOTICE file contents in your distribution"
+    },
+    {
+      "license_id": "Apache-2.0",
+      "obligation_type": "notice",
+      "required": true,
+      "description": "Include a copy of the Apache 2.0 license text with every distribution",
+      "compliance_action": "Ship the full Apache-2.0 license text in a LICENSE file. If the original work includes a NOTICE file, its contents must also be included"
+    },
+    {
+      "license_id": "Apache-2.0",
+      "obligation_type": "state_changes",
+      "required": true,
+      "description": "Modified files must carry prominent notices stating that you changed them",
+      "compliance_action": "Add a note at the top of each modified file (e.g., 'Modified by [name] on [date]') or document changes in a CHANGELOG"
+    },
+    {
+      "license_id": "Apache-2.0",
+      "obligation_type": "patent_grant",
+      "required": false,
+      "description": "Contributors grant a perpetual, worldwide, royalty-free patent license for their contributions. The grant terminates if you file a patent lawsuit alleging infringement by the work",
+      "compliance_action": "No action required to receive the grant. Avoid filing patent claims against the software, as this terminates your patent license"
+    },
+    {
+      "license_id": "Apache-2.0",
+      "obligation_type": "trademark",
+      "required": true,
+      "description": "The license does not grant permission to use the trade names, trademarks, service marks, or product names of the licensor",
+      "compliance_action": "Do not use the original project's name, logo, or trademarks to endorse or promote your derived product without separate written permission"
+    },
+    {
+      "license_id": "GPL-2.0-only",
+      "obligation_type": "attribution",
+      "required": true,
+      "description": "Retain all copyright notices in the source code and any accompanying files",
+      "compliance_action": "Keep all existing copyright headers intact in source files. Include original copyright information in your distribution"
+    },
+    {
+      "license_id": "GPL-2.0-only",
+      "obligation_type": "source_disclosure",
+      "required": true,
+      "description": "When distributing binaries, you must make the complete corresponding source code available under GPL-2.0",
+      "compliance_action": "Offer the complete source code alongside the binary distribution, or provide a written offer (valid for 3 years) to supply the source on request. The source must include all modifications and build scripts"
+    },
+    {
+      "license_id": "GPL-2.0-only",
+      "obligation_type": "copyleft",
+      "required": true,
+      "description": "Any work that is a derivative work (linked, combined, or modified) must also be licensed under GPL-2.0. The entire combined program must be released under GPL-2.0",
+      "compliance_action": "License all derivative and combined works under GPL-2.0-only. This applies to static and dynamic linking in most interpretations. Separate programs communicating via pipes or sockets are generally not considered derivative works"
+    },
+    {
+      "license_id": "GPL-2.0-only",
+      "obligation_type": "notice",
+      "required": true,
+      "description": "Each source file should include a copyright notice and a reference to the GPL-2.0 license. Interactive programs must display a notice at startup",
+      "compliance_action": "Include a copyright header and GPL-2.0 reference in each source file. For interactive programs, display the warranty disclaimer and license pointer at startup"
+    },
+    {
+      "license_id": "GPL-2.0-or-later",
+      "obligation_type": "attribution",
+      "required": true,
+      "description": "Retain all copyright notices in the source code and any accompanying files",
+      "compliance_action": "Keep all existing copyright headers intact in source files. Include original copyright information in your distribution"
+    },
+    {
+      "license_id": "GPL-2.0-or-later",
+      "obligation_type": "source_disclosure",
+      "required": true,
+      "description": "When distributing binaries, you must make the complete corresponding source code available under GPL-2.0 or any later version at your choice",
+      "compliance_action": "Offer the complete source code alongside the binary distribution, or provide a written offer (valid for 3 years) to supply the source. You may choose to distribute under GPL-2.0, GPL-3.0, or any later version published by the FSF"
+    },
+    {
+      "license_id": "GPL-2.0-or-later",
+      "obligation_type": "copyleft",
+      "required": true,
+      "description": "Derivative works must be licensed under GPL-2.0 or any later version. The 'or later' clause allows you to upgrade to GPL-3.0+ if desired",
+      "compliance_action": "License derivative works under GPL-2.0-or-later, or choose a specific later version (e.g., GPL-3.0-only). The version upgrade is at the distributor's discretion"
+    },
+    {
+      "license_id": "GPL-2.0-or-later",
+      "obligation_type": "notice",
+      "required": true,
+      "description": "Include the 'or later version' language in copyright headers to preserve the version upgrade option for downstream recipients",
+      "compliance_action": "Use the standard FSF header: 'This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.'"
+    },
+    {
+      "license_id": "GPL-3.0-only",
+      "obligation_type": "attribution",
+      "required": true,
+      "description": "Retain all copyright notices, license notices, and warranty disclaimers in the source and object code",
+      "compliance_action": "Keep all existing copyright headers and legal notices intact. Include original copyright information in all distributions"
+    },
+    {
+      "license_id": "GPL-3.0-only",
+      "obligation_type": "source_disclosure",
+      "required": true,
+      "description": "When distributing object code, you must provide the Corresponding Source (all source needed to build, install, and run the program, including build scripts and installation instructions)",
+      "compliance_action": "Distribute the Corresponding Source alongside the object code, or provide a durable URL where the source can be downloaded. For network distribution, the source must remain available for as long as the binary is offered"
+    },
+    {
+      "license_id": "GPL-3.0-only",
+      "obligation_type": "copyleft",
+      "required": true,
+      "description": "All derivative works, including works linked against GPL-3.0 libraries, must be licensed under GPL-3.0. The copyleft scope covers the entire combined work",
+      "compliance_action": "License all derivative and combined works under GPL-3.0-only. If combining with code under a GPL-compatible license, the combined work must still be distributed under GPL-3.0"
+    },
+    {
+      "license_id": "GPL-3.0-only",
+      "obligation_type": "patent_grant",
+      "required": false,
+      "description": "Each contributor grants a non-exclusive, worldwide, royalty-free patent license for their contribution. Distributors may not impose further patent restrictions on recipients",
+      "compliance_action": "Do not impose additional patent licensing fees on GPL-3.0 software you distribute. If you receive a patent license that is not extendable to all downstream recipients, you may not distribute the covered work"
+    },
+    {
+      "license_id": "GPL-3.0-only",
+      "obligation_type": "notice",
+      "required": true,
+      "description": "Include appropriate copyright notices, a warranty disclaimer, and a pointer to the full GPL-3.0 text. Interactive programs must display this at startup",
+      "compliance_action": "Add a GPL-3.0 header to each source file. For interactive programs, display the copyright notice, warranty disclaimer, and license reference on startup"
+    },
+    {
+      "license_id": "GPL-3.0-only",
+      "obligation_type": "modification_marking",
+      "required": true,
+      "description": "Modified files must carry prominent notices giving the date of change and indicating that the file was modified",
+      "compliance_action": "Add a notice to each modified file stating the date and nature of the change. Example: 'Modified by [name] on [date]: [description of changes]'"
+    },
+    {
+      "license_id": "GPL-3.0-or-later",
+      "obligation_type": "attribution",
+      "required": true,
+      "description": "Retain all copyright notices, license notices, and warranty disclaimers",
+      "compliance_action": "Keep all existing copyright headers and legal notices intact in all distributions"
+    },
+    {
+      "license_id": "GPL-3.0-or-later",
+      "obligation_type": "source_disclosure",
+      "required": true,
+      "description": "Provide the Corresponding Source when distributing object code, under GPL-3.0 or any later version at your choice",
+      "compliance_action": "Distribute the Corresponding Source alongside the object code or via a durable URL. You may choose to distribute under GPL-3.0 or any later version published by the FSF"
+    },
+    {
+      "license_id": "GPL-3.0-or-later",
+      "obligation_type": "copyleft",
+      "required": true,
+      "description": "Derivative works must be licensed under GPL-3.0 or any later version. The 'or later' clause allows upgrading to future GPL versions",
+      "compliance_action": "License derivative works under GPL-3.0-or-later, or choose a specific later version. The version upgrade decision is at the distributor's discretion"
+    },
+    {
+      "license_id": "GPL-3.0-or-later",
+      "obligation_type": "patent_grant",
+      "required": false,
+      "description": "Same patent grant and anti-patent-aggression provisions as GPL-3.0-only",
+      "compliance_action": "Do not impose additional patent licensing fees. The patent grant applies under whichever GPL version you distribute under"
+    },
+    {
+      "license_id": "GPL-3.0-or-later",
+      "obligation_type": "notice",
+      "required": true,
+      "description": "Include the 'or later version' language in copyright headers to preserve the version upgrade option",
+      "compliance_action": "Use the standard FSF header: 'This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.'"
+    },
+    {
+      "license_id": "GPL-3.0-or-later",
+      "obligation_type": "modification_marking",
+      "required": true,
+      "description": "Modified files must carry prominent notices giving the date of change",
+      "compliance_action": "Add a notice to each modified file stating the date and nature of the change"
+    },
+    {
+      "license_id": "LGPL-2.1-only",
+      "obligation_type": "attribution",
+      "required": true,
+      "description": "Retain all copyright notices and license references in the library source code",
+      "compliance_action": "Keep all existing copyright headers and legal notices intact in the library source files"
+    },
+    {
+      "license_id": "LGPL-2.1-only",
+      "obligation_type": "source_disclosure",
+      "required": true,
+      "description": "When distributing binaries of the library itself (or modified versions), you must provide the complete source code of the LGPL-licensed library. Applications that merely link to the library are not required to disclose their own source",
+      "compliance_action": "Distribute the library source alongside binaries, or provide a written offer valid for 3 years. Only the LGPL-licensed library source must be disclosed, not the proprietary application source"
+    },
+    {
+      "license_id": "LGPL-2.1-only",
+      "obligation_type": "relinking",
+      "required": true,
+      "description": "End users must be able to relink the application with a modified version of the LGPL library. This means either dynamic linking or providing object files sufficient for relinking",
+      "compliance_action": "Use dynamic linking (shared libraries / .so / .dll) to the LGPL component, OR provide the object files or source of your application sufficient to relink with a modified version of the library"
+    },
+    {
+      "license_id": "LGPL-2.1-only",
+      "obligation_type": "notice",
+      "required": true,
+      "description": "Include a copy of both the LGPL-2.1 and GPL-2.0 license texts, as LGPL-2.1 incorporates GPL-2.0 by reference",
+      "compliance_action": "Ship both the LGPL-2.1 and GPL-2.0 license texts in your distribution. Note that the user has the option to treat the library under GPL-2.0 instead of LGPL-2.1"
+    },
+    {
+      "license_id": "LGPL-3.0-only",
+      "obligation_type": "attribution",
+      "required": true,
+      "description": "Retain all copyright notices and license references in the library source code",
+      "compliance_action": "Keep all existing copyright headers and legal notices intact in the library source files"
+    },
+    {
+      "license_id": "LGPL-3.0-only",
+      "obligation_type": "source_disclosure",
+      "required": true,
+      "description": "When distributing object code of the library, provide the Corresponding Source of the library. Applications that link to the library must also provide the Corresponding Application Code (enough to relink)",
+      "compliance_action": "Provide the library source code and, for applications, the object code or source sufficient to relink the application with a modified version of the library"
+    },
+    {
+      "license_id": "LGPL-3.0-only",
+      "obligation_type": "relinking",
+      "required": true,
+      "description": "Users must be able to modify the LGPL library and relink the combined work. The application must support relinking with a user-modified version of the library",
+      "compliance_action": "Use dynamic linking, or provide object files and build instructions sufficient for the user to relink the application with a modified library. Encryption keys for installation must be provided if applicable"
+    },
+    {
+      "license_id": "LGPL-3.0-only",
+      "obligation_type": "notice",
+      "required": true,
+      "description": "Include copies of both the LGPL-3.0 and GPL-3.0 license texts, as LGPL-3.0 is defined as additional permissions on top of GPL-3.0",
+      "compliance_action": "Ship both the LGPL-3.0 and GPL-3.0 license texts. The user has the option to treat the library under GPL-3.0 instead of LGPL-3.0"
+    },
+    {
+      "license_id": "LGPL-3.0-only",
+      "obligation_type": "patent_grant",
+      "required": false,
+      "description": "Inherits the GPL-3.0 patent grant. Contributors grant a royalty-free patent license for their contributions to the library",
+      "compliance_action": "Do not impose additional patent restrictions on the LGPL library. The same anti-patent-aggression rules from GPL-3.0 apply"
+    },
+    {
+      "license_id": "BSD-2-Clause",
+      "obligation_type": "attribution",
+      "required": true,
+      "description": "Redistributions in source or binary form must retain the copyright notice, the list of conditions, and the disclaimer",
+      "compliance_action": "Include the original copyright notice and the two-clause BSD license text in your LICENSE file or documentation. For binary distributions, include it in the documentation or NOTICE file shipped with the product"
+    },
+    {
+      "license_id": "BSD-3-Clause",
+      "obligation_type": "attribution",
+      "required": true,
+      "description": "Redistributions in source or binary form must retain the copyright notice, the list of conditions, and the disclaimer",
+      "compliance_action": "Include the original copyright notice and the three-clause BSD license text in your LICENSE file or documentation"
+    },
+    {
+      "license_id": "BSD-3-Clause",
+      "obligation_type": "trademark",
+      "required": true,
+      "description": "Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without prior written permission",
+      "compliance_action": "Do not use the original author's name or the project name to endorse or promote your derived product unless you have received explicit written permission"
+    },
+    {
+      "license_id": "MPL-2.0",
+      "obligation_type": "attribution",
+      "required": true,
+      "description": "Retain all copyright, patent, trademark, and attribution notices in the source form of the covered software",
+      "compliance_action": "Keep all existing copyright headers and attribution notices in MPL-licensed source files"
+    },
+    {
+      "license_id": "MPL-2.0",
+      "obligation_type": "source_disclosure",
+      "required": true,
+      "description": "If you modify any MPL-licensed file, you must make the source of that specific file available under the MPL. The copyleft scope is per-file, not per-project",
+      "compliance_action": "Distribute the source of any modified MPL-2.0 files alongside your distribution, or make it available via a URL for at least 12 months. Unmodified MPL files and your own new files are not affected"
+    },
+    {
+      "license_id": "MPL-2.0",
+      "obligation_type": "notice",
+      "required": true,
+      "description": "Include a copy of the MPL-2.0 license text with every distribution. Each MPL-licensed file must retain its license header",
+      "compliance_action": "Ship the MPL-2.0 license text in your distribution. Do not remove the MPL header from any covered file"
+    },
+    {
+      "license_id": "AGPL-3.0-only",
+      "obligation_type": "attribution",
+      "required": true,
+      "description": "Retain all copyright notices, license notices, and warranty disclaimers",
+      "compliance_action": "Keep all existing copyright headers and legal notices intact in all distributions"
+    },
+    {
+      "license_id": "AGPL-3.0-only",
+      "obligation_type": "source_disclosure",
+      "required": true,
+      "description": "When distributing object code, provide the Corresponding Source. Same requirements as GPL-3.0",
+      "compliance_action": "Distribute the Corresponding Source alongside the object code or via a durable URL"
+    },
+    {
+      "license_id": "AGPL-3.0-only",
+      "obligation_type": "copyleft",
+      "required": true,
+      "description": "All derivative works must be licensed under AGPL-3.0. The copyleft scope is the same as GPL-3.0 for distributed software",
+      "compliance_action": "License all derivative and combined works under AGPL-3.0-only"
+    },
+    {
+      "license_id": "AGPL-3.0-only",
+      "obligation_type": "notice",
+      "required": true,
+      "description": "Include appropriate copyright notices and a license reference. Interactive programs (including network services) must offer access to the source",
+      "compliance_action": "Add AGPL-3.0 headers to source files. For web interfaces, provide a prominent link (e.g., in the page footer or an 'About' section) where users can download the complete source code"
+    },
+    {
+      "license_id": "AGPL-3.0-only",
+      "obligation_type": "network_disclosure",
+      "required": true,
+      "description": "If users interact with the software over a network (e.g., a web application or API), you must offer those users the Corresponding Source of the running version. This is the key difference from GPL-3.0",
+      "compliance_action": "Provide a download link for the complete source code accessible to all network users. The source must correspond to the exact version running on the server. A common approach is an /about or /source endpoint serving a tarball or linking to a tagged repository"
+    },
+    {
+      "license_id": "ISC",
+      "obligation_type": "attribution",
+      "required": true,
+      "description": "The copyright notice and the permission notice must appear in all copies of the software or substantial portions thereof",
+      "compliance_action": "Include the ISC license text (with the copyright line) in your LICENSE file or documentation. The ISC license is functionally equivalent to a simplified MIT/BSD-2-Clause"
+    },
+    {
+      "license_id": "EUPL-1.2",
+      "obligation_type": "attribution",
+      "required": true,
+      "description": "Retain all copyright notices, license notices, and disclaimer of warranties in the source code",
+      "compliance_action": "Keep all existing copyright headers and the EUPL-1.2 license reference in source files"
+    },
+    {
+      "license_id": "EUPL-1.2",
+      "obligation_type": "source_disclosure",
+      "required": true,
+      "description": "When distributing the work in object code or executable form, provide the source code, or indicate a repository where the source is freely available",
+      "compliance_action": "Distribute the source alongside object code, or provide a URL to a public repository where the source code is available"
+    },
+    {
+      "license_id": "EUPL-1.2",
+      "obligation_type": "copyleft",
+      "required": true,
+      "description": "Derivative works must be licensed under EUPL-1.2 or a compatible license listed in the EUPL-1.2 Appendix (GPL-2.0, GPL-3.0, AGPL-3.0, LGPL-2.1, LGPL-3.0, MPL-2.0, CECILL-2.1, EPL-2.0, and others)",
+      "compliance_action": "License derivative works under EUPL-1.2 or one of the compatible licenses listed in the EUPL-1.2 Appendix. The compatibility list makes EUPL-1.2 one of the most interoperable copyleft licenses"
+    },
+    {
+      "license_id": "EUPL-1.2",
+      "obligation_type": "notice",
+      "required": true,
+      "description": "Include a copy of the EUPL-1.2 license text with every distribution. The EUPL is officially available in 23 EU languages, all equally authentic",
+      "compliance_action": "Ship the EUPL-1.2 license text (in your chosen language version) in your distribution"
+    },
+    {
+      "license_id": "EUPL-1.2",
+      "obligation_type": "modification_marking",
+      "required": true,
+      "description": "When distributing a modified version, you must indicate clearly that the work has been modified and state the date of modification",
+      "compliance_action": "Add a notice to modified files or the distribution indicating the modification date and nature of changes"
+    },
+    {
+      "license_id": "Unlicense",
+      "obligation_type": "notice",
+      "required": false,
+      "description": "The Unlicense is a public domain dedication. There are no obligations: no attribution, no copyleft, no source disclosure. The software is released into the public domain",
+      "compliance_action": "No compliance action required. You may use, modify, and distribute the software without restriction. Note: public domain status may not be recognized in all jurisdictions; in those cases the Unlicense includes a permissive fallback license"
+    }
+  ]
+}
