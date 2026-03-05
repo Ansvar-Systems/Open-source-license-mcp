@@ -12,11 +12,11 @@ RUN npm ci --ignore-scripts
 RUN cd node_modules/better-sqlite3 && npm run build-release
 
 COPY src/ ./src/
+COPY scripts/ ./scripts/
 COPY tsconfig.json ./
 RUN npx tsc
 
 # Build database from seed data
-COPY scripts/ ./scripts/
 COPY data/seed/ ./data/seed/
 RUN npm run build:db
 
