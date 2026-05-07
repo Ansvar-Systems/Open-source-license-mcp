@@ -275,7 +275,14 @@ export function registerTools(server: Server, db: Db): void {
         // License Lookup & Compatibility
         case 'get_license': {
           const licResult = getLicense(db, args as { spdx_id: string });
-          if (!licResult.error) {
+          // Discriminate via `'error' in result` rather than `!licResult.error`.
+          // The success variant has no `error` field at all, so the property
+          // access on the union itself is a TS error (TS2339) — narrowing
+          // never gets a chance. `'error' in` is the canonical narrowing
+          // operator for unions whose discriminant is property presence.
+          if ('error' in licResult) {
+            response = licResult;
+          } else {
             response = {
               ...licResult,
               _citation: buildCitation(
@@ -286,8 +293,6 @@ export function registerTools(server: Server, db: Db): void {
                 licResult.details_url as string | undefined,
               ),
             };
-          } else {
-            response = licResult;
           }
           break;
         }
@@ -307,7 +312,12 @@ export function registerTools(server: Server, db: Db): void {
         // REUSE Compliance
         case 'get_reuse_spec': {
           const reuseResult = getReuseSpec(db, args as { topic: string });
-          if (!reuseResult.error) {
+          // Same narrowing pattern as get_license — `'error' in result`
+          // discriminates the error variant from the (empty | full) success
+          // variants. Both success shapes spread cleanly into the response.
+          if ('error' in reuseResult) {
+            response = reuseResult;
+          } else {
             response = {
               ...reuseResult,
               _citation: buildCitation(
@@ -317,8 +327,6 @@ export function registerTools(server: Server, db: Db): void {
                 { topic: (args as { topic: string }).topic },
               ),
             };
-          } else {
-            response = reuseResult;
           }
           break;
         }
