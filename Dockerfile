@@ -24,7 +24,11 @@ COPY package.json package-lock.json ./
 RUN npm ci --ignore-scripts
 
 COPY src/ ./src/
+COPY scripts/ ./scripts/
 COPY tsconfig.json ./
+# tsconfig.json includes both `src` and `scripts`; with both present tsc
+# emits to `dist/src/...` and `dist/scripts/...`. Drop `scripts/` and tsc
+# falls back to a flat `dist/<file>.js` layout that breaks the CMD path.
 RUN npx tsc
 
 # --- Stage 2: Production ---
