@@ -49,6 +49,51 @@
       "confidence": "established"
     },
     {
+      "license_a": "MIT",
+      "license_b": "GPL-3.0-only",
+      "linking_type": "any",
+      "compatible": true,
+      "direction": "a_into_b",
+      "conditions": "MIT code can be incorporated into GPL-3.0-only projects. The combined work must be distributed under GPL-3.0-only. MIT imposes no additional restrictions beyond what GPL permits.",
+      "confidence": "established"
+    },
+    {
+      "license_a": "MIT",
+      "license_b": "GPL-2.0-only",
+      "linking_type": "any",
+      "compatible": true,
+      "direction": "a_into_b",
+      "conditions": "MIT code can be incorporated into GPL-2.0-only projects. The combined work must be distributed under GPL-2.0-only. MIT imposes no additional restrictions beyond what GPL permits.",
+      "confidence": "established"
+    },
+    {
+      "license_a": "Apache-2.0",
+      "license_b": "GPL-3.0-only",
+      "linking_type": "any",
+      "compatible": true,
+      "direction": "a_into_b",
+      "conditions": "Apache-2.0 code can be included in GPL-3.0-only projects. GPL-3.0 Section 7 explicitly permits additional patent termination clauses, resolving the conflict that exists with GPL-2.0. Combined work distributed under GPL-3.0-only.",
+      "confidence": "established"
+    },
+    {
+      "license_a": "BSD-2-Clause",
+      "license_b": "GPL-3.0-only",
+      "linking_type": "any",
+      "compatible": true,
+      "direction": "a_into_b",
+      "conditions": "BSD-2-Clause code can be incorporated into GPL-3.0-only projects. BSD imposes no additional restrictions beyond what GPL permits. Combined work under GPL-3.0-only.",
+      "confidence": "established"
+    },
+    {
+      "license_a": "BSD-3-Clause",
+      "license_b": "GPL-3.0-only",
+      "linking_type": "any",
+      "compatible": true,
+      "direction": "a_into_b",
+      "conditions": "BSD-3-Clause code can be incorporated into GPL-3.0-only projects. The non-endorsement clause does not impose additional restrictions under GPL-3.0 Section 7. Combined work under GPL-3.0-only.",
+      "confidence": "established"
+    },
+    {
       "license_a": "Apache-2.0",
       "license_b": "GPL-2.0-only",
       "linking_type": "any",

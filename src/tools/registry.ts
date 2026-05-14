@@ -2,6 +2,7 @@
 import { Server } from '@modelcontextprotocol/sdk/server/index.js';
 import { ListToolsRequestSchema, CallToolRequestSchema } from '@modelcontextprotocol/sdk/types.js';
 import type { Db } from '../constants.js';
+import { buildCitation } from '../citation.js';
 
 // License tools (5)
 import { getLicense } from './get-license.js';
@@ -272,9 +273,29 @@ export function registerTools(server: Server, db: Db): void {
       let response;
       switch (name) {
         // License Lookup & Compatibility
-        case 'get_license':
-          response = getLicense(db, args as { spdx_id: string });
+        case 'get_license': {
+          const licResult = getLicense(db, args as { spdx_id: string });
+          // Discriminate via `'error' in result` rather than `!licResult.error`.
+          // The success variant has no `error` field at all, so the property
+          // access on the union itself is a TS error (TS2339) — narrowing
+          // never gets a chance. `'error' in` is the canonical narrowing
+          // operator for unions whose discriminant is property presence.
+          if ('error' in licResult) {
+            response = licResult;
+          } else {
+            response = {
+              ...licResult,
+              _citation: buildCitation(
+                String(licResult.spdx_id),
+                `${licResult.name} (${licResult.spdx_id})`,
+                'get_license',
+                { spdx_id: String(licResult.spdx_id) },
+                licResult.details_url as string | undefined,
+              ),
+            };
+          }
           break;
+        }
         case 'search_licenses':
           response = searchLicenses(db, args as { query: string; copyleft_type?: string; osi_approved?: boolean });
           break;
@@ -289,9 +310,26 @@ export function registerTools(server: Server, db: Db): void {
           break;
 
         // REUSE Compliance
-        case 'get_reuse_spec':
-          response = getReuseSpec(db, args as { topic: string });
+        case 'get_reuse_spec': {
+          const reuseResult = getReuseSpec(db, args as { topic: string });
+          // Same narrowing pattern as get_license — `'error' in result`
+          // discriminates the error variant from the (empty | full) success
+          // variants. Both success shapes spread cleanly into the response.
+          if ('error' in reuseResult) {
+            response = reuseResult;
+          } else {
+            response = {
+              ...reuseResult,
+              _citation: buildCitation(
+                `REUSE ${(args as { topic: string }).topic}`,
+                `REUSE Specification: ${(args as { topic: string }).topic}`,
+                'get_reuse_spec',
+                { topic: (args as { topic: string }).topic },
+              ),
+            };
+          }
           break;
+        }
         case 'check_reuse_rules':
           response = checkReuseRules(db, args as { file_type: string; license_id: string });
           break;

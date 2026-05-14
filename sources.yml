@@ -1,0 +1,137 @@
+# Sources for Open-source-license-mcp
+#
+# This MCP is a license-metadata catalog: it indexes the SPDX License List
+# (license identifiers and metadata about other licenses) plus Ansvar-curated
+# compliance interpretations (compatibility matrix, obligations, NOTICE
+# templates, CRA mapping) derived from the REUSE 3.3 specification and EU
+# CRA (Regulation (EU) 2024/2847) text.
+#
+# No copyrighted upstream corpus is redistributed: the SPDX entries we ship
+# are license identifiers + metadata fields (osi_approved, fsf_free,
+# deprecated, copyleft_type, details_url), not the full text of the licensed
+# works themselves. License-text references are URLs to the canonical SPDX
+# / OSI / FSF / opensource.org details pages.
+#
+# Per ADR-030, this MCP is a candidate for no-source-rights-allowlist
+# promotion. See infrastructure/policy/no-source-rights-allowlist.yml in
+# the arch-docs repo.
+
+version: 1
+last_updated: '2026-05-14'
+
+sources:
+  - id: spdx-licenses
+    name: SPDX License List
+    publisher: SPDX (Linux Foundation)
+    url: https://spdx.org/licenses/
+    upstream_data_url: https://raw.githubusercontent.com/spdx/license-list-data/main/json/licenses.json
+    license: CC0-1.0
+    commercial_allowed: true
+    verified_at: '2026-05-14'
+    terms_url: https://spdx.dev/terms-of-use/
+    ingestion_script: scripts/fetch-spdx.ts
+    coverage:
+      item_count: 727
+      version: 'SPDX License List v3.28.0'
+    notes: |
+      SPDX License List data is CC0-1.0 dedicated (public domain). We ingest
+      license identifiers and metadata (osi_approved, fsf_free, deprecated,
+      details_url, see_also), not the full text of each license. The seed
+      output lives at data/seed/spdx-licenses.json and is rebuilt via
+      scripts/fetch-spdx.ts.
+
+  - id: reuse-spec
+    name: REUSE Specification 3.3
+    publisher: Free Software Foundation Europe (FSFE)
+    url: https://reuse.software/spec/
+    license: CC-BY-SA-4.0
+    commercial_allowed: true
+    verified_at: '2026-05-14'
+    terms_url: https://reuse.software/dev/
+    coverage:
+      item_count: 23
+      version: '3.3'
+    notes: |
+      REUSE 3.3 specification text and SPDX header rules are CC-BY-SA-4.0.
+      We extract rule semantics (file-pattern → header-format mapping) as
+      structured metadata, not verbatim spec prose. Seed at
+      data/seed/reuse-spec.json.
+
+  - id: cra-regulation
+    name: EU Cyber Resilience Act (Regulation (EU) 2024/2847)
+    publisher: European Union (Official Journal)
+    url: https://eur-lex.europa.eu/eli/reg/2024/2847/oj
+    license: CC-BY-4.0
+    commercial_allowed: true
+    verified_at: '2026-05-14'
+    terms_url: https://eur-lex.europa.eu/content/legal-notice/legal-notice.html
+    coverage:
+      item_count: 18
+      scope: 'Article 13(1)(f), Article 13(6), Article 24'
+    notes: |
+      EU legal texts published in the Official Journal are reproducible under
+      EUR-Lex re-use terms (CC-BY-4.0 for content from 12 December 2011).
+      Our seed (data/seed/cra-license-obligations.json) is an Ansvar-curated
+      mapping of CRA articles to per-license-family compliance obligations,
+      not a copy of the regulation text. Author: Ansvar (Apache-2.0).
+
+  - id: ansvar-compatibility-matrix
+    name: Ansvar curated license compatibility matrix
+    publisher: Ansvar Systems
+    url: https://github.com/Ansvar-Systems/Open-source-license-mcp
+    license: Apache-2.0
+    commercial_allowed: true
+    verified_at: '2026-05-14'
+    coverage:
+      item_count: 26
+      methodology: 'Each pairing verified against license text and FSF/OSI/SPDX published guidance'
+    notes: |
+      Ansvar-authored curated compatibility analysis between common OSS
+      licenses. Source: data/seed/compatibility-matrix.json. Derived from
+      published legal analysis (FSF compatibility matrix, SPDX license
+      expressions spec, OSI guidance); the matrix entries themselves are
+      Ansvar-authored summaries of consensus interpretations, not copies of
+      upstream tables. Apache-2.0 (same as this repo).
+
+  - id: ansvar-obligations
+    name: Ansvar curated license obligations
+    publisher: Ansvar Systems
+    url: https://github.com/Ansvar-Systems/Open-source-license-mcp
+    license: Apache-2.0
+    commercial_allowed: true
+    verified_at: '2026-05-14'
+    coverage:
+      item_count: 54
+      scope: '15 common OSS licenses (MIT, Apache-2.0, BSD-2/3-Clause, GPL-2.0/3.0, LGPL, AGPL, MPL, EPL, …)'
+    notes: |
+      Ansvar-authored compliance obligation descriptions per license
+      (attribution, notice, source-disclosure, patent-grant, trademark,
+      state-changes, anti-tivoization). Source: data/seed/obligations.json.
+      These are plain-English summaries of license terms, not reproductions
+      of license text. Apache-2.0.
+
+  - id: ansvar-notice-templates
+    name: Ansvar curated NOTICE/attribution templates
+    publisher: Ansvar Systems
+    url: https://github.com/Ansvar-Systems/Open-source-license-mcp
+    license: Apache-2.0
+    commercial_allowed: true
+    verified_at: '2026-05-14'
+    coverage:
+      item_count: 10
+      scope: 'Per-license NOTICE/attribution templates for MIT, Apache-2.0, BSD-2/3-Clause, GPL-2.0/3.0, LGPL-2.1, MPL-2.0, ISC, EPL-2.0'
+    notes: |
+      Ansvar-authored NOTICE-file scaffolding (required_text excerpts +
+      attribution_format guidance + modification_marking rules). The
+      "required_text" field intentionally includes short verbatim
+      grant/permission clauses that are reproduced under fair-use /
+      reference-quotation for compliance-tooling purposes — they are
+      identical to the corresponding clauses any user must reproduce to
+      satisfy the underlying license. Source: data/seed/notice-templates.json.
+
+# License-family references (URL-only; not redistributed):
+# - OSI Approved Licenses: https://opensource.org/licenses/
+# - FSF Free Software Licenses: https://www.gnu.org/licenses/license-list.html
+# These pages are referenced by SPDX seeAlso URLs but their content is NOT
+# ingested into the database — we ship only SPDX identifier flags
+# (osi_approved, fsf_free) about each license, not the OSI/FSF page text.
